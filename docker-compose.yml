@@ -1,5 +1,5 @@
 
-version: "2.1"
+version: "3.4"
 services:
   plex:
     image: lscr.io/linuxserver/plex
@@ -9,8 +9,10 @@ services:
       - PUID=1000
       - PGID=1000
       - VERSION=docker
-      - PLEX_CLAIM=     #https://www.plex.tv/claim/
     volumes:
-      - /path/to/library:/config
+      - plex_data:/config
       - /media/plexstorage:/media                 #montamos la carpeta remota donde esta nuestro contenido en el contenedor
     restart: unless-stopped
+    
+volumes:
+  plex_data:
