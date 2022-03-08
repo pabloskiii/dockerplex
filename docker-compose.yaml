@@ -9,7 +9,8 @@ services:
       - PUID=1000
       - PGID=1000
       - VERSION=docker
-      - PLEX_CLAIM= claim-ewDaKq8TCbh4jVjLZG3Z    #https://www.plex.tv/claim/
+      - PLEX_CLAIM=     #https://www.plex.tv/claim/
     volumes:
+      - /path/to/library:/config
       - /media/plexstorage:/media                 #montamos la carpeta remota donde esta nuestro contenido en el contenedor
     restart: unless-stopped
