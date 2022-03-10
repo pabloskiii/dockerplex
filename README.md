@@ -1,5 +1,5 @@
 # dockerplex
-Aqui se subira el docker-compose utilizado en el despliegue de el contenedor de plex
+Aqui se subira el docker-compose utilizado en el despliegue de el contenedor de plex del proyecto integrado de ASIR de Pablo Villegas Aguilar
 
 ```
 
