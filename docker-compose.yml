@@ -1,11 +1,11 @@
-
-version: "3.4"
+#Docker-Compose para el despliegue de un contenedor de plex media server
+version: "3.4"                                  
 services:
   plex:
-    image: lscr.io/linuxserver/plex
+    image: lscr.io/linuxserver/plex             #la imagen de plex que vamos a descargar e instalar
     container_name: plex
     network_mode: host
-    ports:
+    ports:                                      #Definimos los puertos que se usaran para acceder al servicio y los asignaremos al contenedor
       - "32400:32400"
       - "1900:1900"
       - "3005:3005"
@@ -20,11 +20,11 @@ services:
       - PUID=1000
       - PGID=1000
       - VERSION=docker
-      - PLEX_CLAIM= claim-oRHxJvUMMiRD9YkFe51y    #opcional, se puede obtener aqui https://www.plex.tv/claim/
+      - PLEX_CLAIM=    #opcional, se puede obtener aqui https://www.plex.tv/claim/
     volumes:
       - plex_data:/config
       - /media/plexstorage:/media                 #montamos la carpeta remota donde esta nuestro contenido en el contenedor
-    restart: always
+    restart: always                               #Habilitamos que este contenedor se lance con el inicio del sistema
   
 volumes:
   plex_data:
