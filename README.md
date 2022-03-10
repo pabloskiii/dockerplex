@@ -1,7 +1,7 @@
 # dockerplex
 Aqui se subira el docker-compose utilizado en el despliegue de el contenedor de plex
 
-...
+```
 
 #Docker-Compose para el despliegue de un contenedor de plex media server
 version: "3.4"                                  
@@ -34,4 +34,4 @@ services:
 volumes:
   plex_data:
   
-...
+```
